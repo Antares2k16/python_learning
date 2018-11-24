@@ -15,19 +15,19 @@ class TestEmployee(unittest.TestCase):
     def setUp(self):
         """Create an employee for use in all test methods."""
         
-        self.my_employee = Employee("bob", "jefferson")
+        self.my_employee = Employee("bob", "jefferson", 67000)
         
     def test_give_default_raise(self):
         """Test if salary raises by default amount"""
         
         self.my_employee.give_raise()
-        self.assertEqual(self.salary, 72000)
+        self.assertEqual(self.my_employee.self.salary, 72000)
         
     def test_give_custom_raise(self):
         """Test if salary raises by custom amount"""
         
         self.my_employee.give_raise(1000)
-        self.assertEqual(self.salary, 68000)
+        self.assertEqual(self.my_employee.self.salary, 68000)
         
 unittest.main()
         
